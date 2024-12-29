@@ -9,7 +9,7 @@ from data_loader import MNISTDataLoader
 from config import ModelConfig
 from trainer import Trainer
 from visualizer import Visualizer
-from torchvision import datasets
+#from torchvision import datasets
 from torch.utils.data import DataLoader
 from inference import ImagePredictor, ModelType
 from PIL import Image
@@ -94,8 +94,9 @@ class MNISTApp:
             train_loader = data_loader.get_train_loader()
 
             # Create a validation loader
-            val_dataset = datasets.MNIST('../data', train=False, download=True, transform=data_loader.transform)
-            val_loader = DataLoader(val_dataset, batch_size=self.batch_size, shuffle=False)
+            #val_dataset = datasets.MNIST('num_data', train=False, download=True, transform=data_loader.transform)
+            #val_loader = DataLoader(val_dataset, batch_size=self.batch_size, shuffle=False)
+            val_loader = data_loader.get_test_loader()
             
             # Initialize a Streamlit empty container for dynamic updates
             epoch_status_container = st.status(label=f"Training {self.model_type.value} on '{self.device}'")
