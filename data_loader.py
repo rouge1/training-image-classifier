@@ -5,7 +5,7 @@ from torchvision import datasets, transforms
 from pathlib import Path
 
 class MNISTDataLoader:
-    def __init__(self, data_dir='/data/num_data/mnist', batch_size=128):
+    def __init__(self, data_dir='num_data/mnist', batch_size=128):
         self.data_dir = Path(data_dir)
         self.batch_size = batch_size
         
