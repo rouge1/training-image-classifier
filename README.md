@@ -14,3 +14,7 @@ The code structure is as follows:
     5. visulaizer.py: Handles plotting and visualization
 		
     6. app.py: Manges the Streamlit interface and orchestrates the training process.
+
+To run the program type:
+
+     streamlit run app.py
